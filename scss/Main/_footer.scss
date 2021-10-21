@@ -1,0 +1,75 @@
+footer{
+    background-color: $DarkBlue;
+    @include flex(column, center, center, 1.5em);
+    padding: 2em 10vw;
+        .request {
+            margin-top: 1em;
+            @include request;
+        }
+}
+.logo2 {
+    filter: brightness(300%);
+}
+
+.socials {
+    margin-top: 2em;
+    @include flex(row, center, space-between, 1em);
+}
+
+.contact{
+    @include flex(column, center, center, 1em);
+    a {
+        @include fonts($Font400, 1rem);
+        color: $VeryLightGray;
+        text-decoration: none;
+    }
+
+    
+}
+
+
+
+.policy{
+    color: $GrayishBlue;
+    @include fonts($Font400, 1rem);
+}
+
+.organizer4{
+    @include flex(column, center, center, 1em);
+}
+
+@media (min-width:700px){
+    footer{
+        max-height: 20vh;
+        @include flex(row, flex-start, space-between, 1em);
+        .request {
+                font-size: 1rem;
+            }
+    }
+
+    .contact{
+        align-items: flex-start;
+        max-height: 10vh;
+        margin: 0;
+        flex-wrap: wrap;
+        width: auto;
+            a {
+                width: 8vw;
+                transition: 300ms ease-in-out;
+            }
+            a:hover{
+                color: $LimeGreen;
+            }
+    }
+    .organizer3{
+        height: auto;
+        margin:0;
+        @include flex(column, center, space-between, 1em);
+    }
+
+    .organizer4{
+        @include flex(column, center, space-between, 2em);
+    }
+
+    
+}

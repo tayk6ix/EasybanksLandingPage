@@ -1,0 +1,33 @@
+@mixin fonts($FontD1,$size) {
+    font-family: $FontPS;
+    font-weight: $FontD1;
+    font-size: $size;
+}
+
+@mixin flex($row,$align,$justify,$gap) {
+    display: flex;
+    flex-direction: $row;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin image($repeat, $size, $x, $y) {
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position-x: $x;
+    background-position-y: $y;
+}
+
+@mixin request {
+    text-decoration: none;
+    color: $White;
+    background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+    padding: .9em 1.9em;
+    border-radius: 1.5em;
+    @include fonts($Font700, 1rem);
+    transition: 300ms ease-in-out;
+        &:hover {
+            filter: brightness(150%);
+        }
+}

@@ -1,0 +1,70 @@
+.last_section{
+    background-color: $VeryLightGray;
+    @include flex(column, center, center, 1em);
+    padding: 10vh 10vw;
+        h2{
+            @include fonts($Font300, 2rem);
+            margin-bottom: 1em;
+        }
+}
+.organizer2{
+    @include flex(column, center, center, 1em);
+}
+.articles{
+    $borderR: .5em;
+    @include flex(column, center, flex-start, 1em);
+    border-radius: $borderR;
+    text-align: left;
+    background-color: $White;
+    
+        figure{
+            width: 100%;
+            min-height: 26vh;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $borderR $borderR 0 0;
+                }
+        }
+
+        h4{
+            @include fonts($Font400, .717rem);
+            color: $GrayishBlue;
+        }
+        a {
+            @include fonts($Font400, 1.039rem);
+            text-decoration: none;
+            color: $DarkBlue;
+        }
+
+        p{
+            @include fonts($Font400, .717rem);
+            color: $GrayishBlue;
+            line-height: 1.5em;
+        }
+
+}
+
+.information{
+    @include flex(column, flex-start, center, .75em);
+    padding: 2em;
+}
+
+@media (min-width: 700px){
+    .organizer2{
+        @include flex(row, flex-start, center, 1em);
+
+    }
+
+    .last_section{
+        @include flex(column, flex-start, center, 1em);
+    }
+    .information{
+        a{
+            transition: 300ms ease-in-out;
+        }
+        a:hover{
+            color: $LimeGreen;
+        }
+    }
+}

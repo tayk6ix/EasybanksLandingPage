@@ -1,0 +1,66 @@
+.section2{
+    @include flex(column, flex-start, center, 2em);
+    background-color: $LightGrayishBlue;
+    padding: 10vh 10vw;
+}
+
+.sub_title {
+    @include flex(column, center, center, 1em);
+        h2 {
+            @include fonts($Font300, 2rem);
+
+        }
+        p {
+            @include fonts($Font400, .88rem);
+            color: $GrayishBlue;
+            line-height: 1.5em;
+        }
+}
+
+.items{
+    @include flex(column, center, center, 1em);
+    h3{
+        @include fonts($Font300, 1.3rem);
+    }
+    p{
+        @include fonts($Font400, .89rem);
+        color: $GrayishBlue;
+        line-height: 1.5em;
+    }
+}
+
+@media (min-width:700px){
+    .section2{
+        text-align: left;
+            p {
+                font-size: 1.2rem;
+            }
+            h2{
+                font-size: 2.5rem;
+            }
+            h3{
+                font-size: 1.8rem;
+            }
+    }
+    .sub_title{
+        max-width: 45%;
+    }
+
+    .sub_title, .items{
+        @include flex(column, flex-start, center, 1em);
+    }
+
+    .items{
+        figure{
+            height: 90px;
+            width: 90px;
+                img{
+                    width: 100%
+                }
+        }
+    }
+
+    .organizer{
+        @include flex(row, center, space-between, 1.5rem);
+    }
+}

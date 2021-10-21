@@ -1,0 +1,74 @@
+.mackup{
+    background-image: url(/images/bg-intro-mobile.svg);
+    @include image(no-repeat, cover, center, -300%);
+    width: 100%;
+    height: 50vh;
+        .over{
+            background-image: url(/images/image-mockups.png);
+            @include image(no-repeat, cover, center, 70%);
+            width: 100%; 
+            height: 100%;
+        }
+}
+
+.next_gen {
+    font-size: 16px;
+    @include flex(column, center, center, 1.25em);
+    padding: 3.125em 10vw 5.375em;
+        .request{
+        @include request;
+        
+        }
+        h1 {
+            @include fonts($Font400, 2.5rem);
+            color: $DarkBlue;
+        }
+        p {
+            @include fonts($Font400, .88rem);
+            color: $GrayishBlue;
+            line-height: 1.5em;
+            margin-bottom: .6rem;
+        }
+}
+
+@media (min-width:700px){
+
+    main{
+        position: relative;
+    }
+    .section1{
+        height: 90vh;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .next_gen{
+        align-items: flex-start;
+        text-align: left;
+        margin-right: 0;
+        .request {
+            font-size: 1rem;
+        }
+        h1{
+            font-size: 4.4rem;
+        }
+        p{
+            font-size: 1.3em;
+        }
+    
+    }
+    .mackup {
+        height: 100%;
+        width: 120vw;
+        background-image: url(/images/bg-intro-desktop.svg);
+        @include image(no-repeat, 90%, 100%, -5vh);
+            .over{
+                position: absolute;
+                top: -40em;
+                right: -40em;
+                @include image(no-repeat, 40%, center, center);
+            }
+    }
+  
+}
+
