@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [FrontEnd](https://www.frontendmentor.io/solutions/project3-done-in-1-day-how-did-i-do-zwru5HWJ3)
+- Live Site URL: [LiveSite](https://your-live-site-url.com)
 
 ## My process
 
